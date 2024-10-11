@@ -13,27 +13,27 @@ body{
 }
 
 .sec1{
-    background-image: url(../Portfolio2/Photos/bg1-6.png);
+    background-image: url(./Photos/bg1-6.png);
     min-width: 100%;   
 }
 .sec2{
-    background-image: url(../Portfolio2/Photos/bg2-3.jpeg);
+    background-image: url(./Photos/bg2-3.jpeg);
     min-width: 100%;
 }
 .sec3{
-    background-image: url(../Portfolio2/Photos/bg3-2.png);
+    background-image: url(./Photos/bg3-2.png);
     min-width: 100%;
 }
 .sec4{
-    background-image: url(../Portfolio2/Photos/bg2-1.png);
+    background-image: url(./Photos/bg2-1.png);
     min-width: 100%;
 }
 .sec5{
-    background-image: url(../Portfolio2/Photos/bg2-1.png);
+    background-image: url(./Photos/bg2-1.png);
     min-width: 100%;
 }
 .sec6{
-    background-image: url(../Portfolio2/Photos/bg2-1.png);
+    background-image: url(./Photos/bg2-1.png);
     min-width: 100%;
 }
 .sec1,.sec2,.sec3,.sec4,.sec5,.sec6{
@@ -210,7 +210,7 @@ font-family: "Russo One", sans-serif;
 
 .profile{
     flex-basis: 40%;
-    background-image: url(../Portfolio2/Photos/myphoto.jpg);
+    background-image: url(./Photos/myphoto.jpg);
     position: relative;
   background-position: center;
   background-size: cover;
