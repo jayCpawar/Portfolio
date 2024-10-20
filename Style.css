@@ -1,12 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abel&family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+
 *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
-    font-family: "Roboto Mono",sans-serif;
+    font-family: "Azeret Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
     align-items: center;
     color: antiquewhite;
 
@@ -21,19 +30,20 @@ body{
     min-width: 100%;
 }
 .sec3{
-    background-image: url(./Photos/bg3-2.png);
+    background-image: url(./Photos/bg3-3-1.png);
     min-width: 100%;
 }
 .sec4{
-    background-image: url(./Photos/bg2-1.png);
+    background-image: url(./Photos/bg2-1-2.png);
     min-width: 100%;
 }
 .sec5{
-    background-image: url(./Photos/bg2-1.png);
+    background-image: url(./Photos/bg5-1.jpeg);
     min-width: 100%;
+    padding-bottom: 100px;
 }
 .sec6{
-    background-image: url(./Photos/bg2-1.png);
+    background-image: url(./Photos/bg6-1.png);
     min-width: 100%;
 }
 .sec1,.sec2,.sec3,.sec4,.sec5,.sec6{
@@ -45,6 +55,7 @@ body{
 }
 
 .heading{
+    
     flex-basis: 40%;
     height: 100px;
    margin-left: 198px;
@@ -53,7 +64,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 0 0 0 30px;
     top: 0;
     z-index: 2;
     border-bottom: 1px solid rgb(255, 255, 255);
@@ -63,12 +74,47 @@ body{
    height: 100px;
 }
 
+#downloadCv{
+    width: 300px;
+    height: 70px;
+    background-color: #7c97e9;
+    color: antiquewhite;
+    position: relative;
+    right: -1251px;
+    top: 624px;
+ font-size: 35px;
+ text-align: center;
+text-decoration: none;
+border-radius: 5px;
+ 
+font-family: "Abel", sans-serif;
+font-weight: 1000;
+font-style: normal;
+ opacity: 1;
+ line-height: 1.0;   
+
+ padding: 18px;
+
+}
+
+#downloadCv:hover{
+    /* color:#7c97e9 ;
+    background: antiquewhite; */
+    transform: scale(1.1);
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
 .aside1{
     display: flex;
     gap: 65px;
 
+
 }
 .button{
+    font-family: "Azeret Mono", monospace;
+    font-optical-sizing: auto;
+      font-style: normal;
     height: 50px;
     font-size: 20px;
     border: none;
@@ -89,6 +135,7 @@ body{
 }
 .pre1{
  
+
     font-family: "Abel", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -96,7 +143,7 @@ body{
     font-size: 80px;
     margin:0%;
     line-height: 1.0;   
-
+width: 800px;
 }
 
 .pre2{
@@ -104,22 +151,27 @@ font-family: "Russo One", sans-serif;
     font-weight: 400;
     font-style: normal;
     position: relative;
-    top: -58px;
+    top: 0;
+    left: 600px;
     font-size: 165px;
     margin-left: -603px;
     line-height: 0.85;   
+    max-width: 1000px;
+    padding-bottom: 100px;
 
 }
 
-
+.bg-blur{
+    background: linear-gradient(135deg , rgba(255,255,255,0), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
+}
 
 .container {
     width: 300px; /* Adjust as needed */
     height: 300px;
 
-    background: linear-gradient(135deg , rgba(255,255,255,0), rgba(255,255,255,0));
-    backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
+  
 
 
     display: flex;
@@ -129,7 +181,6 @@ font-family: "Russo One", sans-serif;
     position: relative;
     color: rgb(255, 255, 255);
     font-size: 10px;
-    font-weight: bold;
     padding: 20px;
 
     font-size: 20px;
@@ -159,11 +210,12 @@ font-family: "Russo One", sans-serif;
     right: 0;
     border-width: 0px 5px  5px 0;
 }
+
+
 .container:hover {
     box-shadow: 3px 1px 30px 1px;
 
-    transition: 0.5s;
-    border-radius: 15px;
+transform: scale(1.08);
     border: white;
     }
 .text-small {
@@ -171,7 +223,6 @@ font-family: "Russo One", sans-serif;
     bottom: 10px;
     right: 10px;
     font-size: 25px; /* Font size for 'YEAR' text */
-    font-weight: bold;
     color: #00bfff; /* Cyan color */
     letter-spacing: 2px;
 }
@@ -192,7 +243,6 @@ font-family: "Russo One", sans-serif;
     background: white;
     text-align: center;
     font-size: 50px;
-    font-weight: bold;
     position: relative;
     color: #00ffff;
     border-radius: 50px;
@@ -200,7 +250,7 @@ font-family: "Russo One", sans-serif;
 
 }
 
-#About_Me{
+.ab-me{
     height: 50px;
     align-items: center;
     position: relative;
@@ -225,7 +275,6 @@ font-family: "Russo One", sans-serif;
     border: none;
     box-shadow: 3px 1px 30px 1px;
 
-    transition: 0.5s;
     border-radius: 15px;
     border: white;
     }
@@ -279,7 +328,6 @@ font-family: "Russo One", sans-serif;
     font-size: 20px;
     box-shadow: 1px 1px 3px black;
 color: white;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     padding: 10px;
     transition: 0.5s;
     border: white;
@@ -323,13 +371,10 @@ color: white;
 .a3:hover {
     color: white;
     background: #ff4c76;
-    transition: 0.5s;
     border: none;
 
     box-shadow: 1px 1px 30px 1px rgb(247, 6, 243);
 
-    transition: 0.5s;
-    border-radius: 15px;
 }
 .a3:hover + .a5 {
     color: #00ffff;
@@ -358,14 +403,15 @@ color: white;
     width: 300px;
     height: 200px;
 border: 1px solid white;        
-    background: linear-gradient(135deg , rgba(255,255,255,0), rgba(255,255,255,0));
-    backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
+
 display: flex;
 align-items: center;
 justify-content: center;
 }
-
+.icon:hover{
+    transform: scale(1.2);
+transition-duration: .5s;
+}
 
 .icon:hover .img2{
     filter:invert(0%);
@@ -399,6 +445,9 @@ justify-content: center;
 #springboot{
     height: 80px;
 }
+#maven{
+    height: 60px;
+}
 .skrew{
     height: 30px;
     position: absolute;
@@ -422,7 +471,219 @@ right: 0px;
 }
 
 .sec5-1{
-    grid-template-columns: repeat(2,1fr);
-    justify-content: space-evenly;
-    padding-left: 8vw;
+    position: relative;
+    overflow-y: auto;
+    height: 550px;
+
+    padding-top: 30px;
+    padding-left: 400px;
+}
+
+.sec5-1::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and other WebKit browsers */
+}
+.Project{
+    width: 60%;
+    border: 1px solid whitesmoke;
+    position: sticky;
+    top: 0px;
+    padding: 0 20px;
+    height: 420px;
+    box-shadow: 0 -5px 10px black , 0 5px 10px black;
+    flex-direction: column;
+    align-items: center;
+  
+    border-radius: 10px;
+}
+
+#project2{
+    height: 450px;
+}
+.titile{
+display: flex;
+}
+
+.project-title{
+    margin: 10px;
+    border: 1px dotted white;
+    background: #39598c;
+    color:whitesmoke;
+    height: 60px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.titile  div{
+    padding-right: 5px;
+}
+.Project:hover >.titile  div
+{
+    color: #00bfff;
+
+}
+
+.sec6-1{
+    margin: 0 198px;
+    height: 500px;
+    display: flex;
+}
+.sec6-1-1{
+    flex-basis: 50%;
+    border-radius: 5px;
+    padding: 30px;
+}
+.sec6-1-2{
+    flex-basis: 50%;
+}
+
+#submit_form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+#contact_p{
+    margin: 0 196px 30px 196px ;
+align-items: center;
+}
+
+
+/* Form container styling */
+#submit_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #16153d;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for all input fields */
+#submit_form input[type="text"],
+#submit_form input[type="email"],
+#submit_form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+ 
+}
+
+/* Button styling */
+#submit_form button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: "Azeret Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-style: normal;
+}
+
+/* Button hover effect */
+#submit_form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Recaptcha container */
+.g-recaptcha {
+    margin-bottom: 15px;
+}
+
+/* Form placeholders */
+#submit_form input::placeholder,
+#submit_form textarea::placeholder {
+    color: #888;
+    font-family: "Azeret Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-style: normal;}
+
+.sec6-1-2{
+display: flex;
+align-items: center;
+justify-content: center;
+    }
+#Contact_div2{
+    background-color: white;
+    position: relative;
+    left: 100px;
+    width: 320px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.icon-container{
+display: flex;
+flex-direction: column;
+}
+.sub-icon-container1{
+    width: 100%;
+display: flex;
+
+}
+
+
+#Resume{
+    height:85px;
+    width: 310px;
+    background: #000;
+}
+#Resume:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+    transition-duration: .5s;
+}
+.sub-icon-container2{
+    margin: 0 5px  0 5px;
+    width: 100%;
+display: flex;
+
+}
+footer{
+    height: auto;
+    text-align: center;
+    display: flex;
+    padding: 10px 20px 10px 20px;
+}
+footer>p{
+    flex-basis: 80%;
+    position: relative;
+    font-size: 22px;
+    left: 150px;
+    top: 10px;
+}
+.logo_container{
+    flex-basis: 20%;
+    position: relative;
+    right: 20px;
+    display: flex;
+    gap: 50px;
+}
+
+.logo_container > a>img{
+    height: 45px;
+    filter: invert(100);
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.logo_container > a:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+    transition-duration: .5s;
 }
