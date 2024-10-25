@@ -3,14 +3,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
 
+@import url('/media.css');
+
 *{
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
-html{
+html,body{
     scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
+
 body{
     font-family: "Azeret Mono", monospace;
     font-optical-sizing: auto;
@@ -21,30 +29,60 @@ body{
 
 }
 
+
 .sec1{
     background-image: url(./Photos/bg1-6.png);
-    min-width: 100%;   
+    max-width: 100%;   
+    z-index: -10;
+    padding-top: 1vh;
+margin-bottom: -20vh;
+    position: relative;
+    top: -100px;
+}
+.heading{
+    background-image: url(./Photos/bg1-6.png);
+    max-width: 100%;   
 }
 .sec2{
     background-image: url(./Photos/bg2-3.jpeg);
     min-width: 100%;
 }
+#about-me{
+    position: relative;
+    top: -20vh;
+}
 .sec3{
     background-image: url(./Photos/bg3-3-1.png);
     min-width: 100%;
 }
+#education{
+    position: relative;
+    top: -20vh;
+}
 .sec4{
     background-image: url(./Photos/bg2-1-2.png);
     min-width: 100%;
+}
+#skills{
+    position: relative;
+    top: -20vh;
 }
 .sec5{
     background-image: url(./Photos/bg5-1.jpeg);
     min-width: 100%;
     padding-bottom: 100px;
 }
+#projects{
+    position: relative;
+    top: -20vh;
+}
 .sec6{
     background-image: url(./Photos/bg6-1.png);
     min-width: 100%;
+}
+#contact{
+    position: relative;
+    top: -20vh;
 }
 .sec1,.sec2,.sec3,.sec4,.sec5,.sec6{
     position: relative;
@@ -58,58 +96,124 @@ body{
     
     flex-basis: 40%;
     height: 100px;
-   margin-left: 198px;
-   margin-right: 198px;
-    width: 75%;
+   margin-left: 6vw;
+   margin-right: 78px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 0 0 30px;
+    padding: 30px;
     top: 0;
-    z-index: 2;
-    border-bottom: 1px solid rgb(255, 255, 255);
-
+    z-index: 100;
+    border: 1px solid rgb(255, 255, 255);
+position: sticky;
+background-color: #000;
+top: 10px;
+border-radius: 30px;
 }
 .logo{
    height: 100px;
 }
 
+
+#side_bar{
+display: none;
+flex-direction: column;
+position: fixed;
+gap: 1vw;
+background-color: rgb(6, 6, 6,0.5);
+backdrop-filter: blur(10px);
+justify-content: center;
+align-items: start;
+right: -10vw;
+top: 38vh;
+height: 80vh;
+width: 41vw;
+padding: 9vw;
+box-shadow: -10px 0 10px black;
+z-index: 1111;
+margin: -35vw;
+right: 40vw;
+
+}
+#closeSideBar{
+position: relative;
+left: -8vw;
+}
+.svg_button{
+    cursor: pointer;
+    background-color: rgb(124, 151, 233, 0.5);
+    border: 1px solid #ffff;
+    border-radius: 1vw;
+    backdrop-filter: blur(10px);}
+    .svg_button:hover{
+        transform: scale(1.2);
+    }
+#openSideBar{
+    left: -8vw; 
+}
+#side_bar_Container{
+    position: sticky;
+    z-index: 1000;
+    left: 10vw;
+    display: none;
+    gap: 70vw;
+align-items: center;
+}
 #downloadCv{
     width: 300px;
     height: 70px;
-    background-color: #7c97e9;
+    background-color: rgb(124, 151, 233);
     color: antiquewhite;
     position: relative;
-    right: -1251px;
-    top: 624px;
- font-size: 35px;
- text-align: center;
-text-decoration: none;
-border-radius: 5px;
- 
-font-family: "Abel", sans-serif;
-font-weight: 1000;
-font-style: normal;
- opacity: 1;
- line-height: 1.0;   
-
- padding: 18px;
-
+    right: -1230px; /* Make sure this offset is intentional */
+    top: -186px; /* Check if this is pushing the element off the screen */
+    font-size: 35px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: "Abel", sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+    opacity: 1;
+    line-height: 1.0;   
+    padding: 18px;
+    transition: 0.3s ease all;
+    z-index: 2; /* Ensure button content stays on top */
+}
+/* 
+#downloadCv:before{
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #cf0e0e;
+    z-index: 1;
 }
 
-#downloadCv:hover{
-    /* color:#7c97e9 ;
-    background: antiquewhite; */
-    transform: scale(1.1);
-    cursor: pointer;
-    transition-duration: .5s;
+#downloadCv:hover, #downloadCv:focus{
+    color: black; 
 }
+
+#downloadCv:hover::before, #downloadCv:focus::before{
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+#downloadCv:active{
+    transform: scale(0.9);
+}
+ */
+
 
 .aside1{
     display: flex;
     gap: 65px;
-
-
 }
 .button{
     font-family: "Azeret Mono", monospace;
@@ -121,15 +225,34 @@ font-style: normal;
     color: aliceblue;
     background-color:transparent ;
 
+
+    width: max-content;
+    position: relative;
+    cursor: pointer;
+    margin: 10px auto;
+
 }
-.button:hover{
-    transition: 2s;
-    text-decoration: underline;
+
+.button::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    background: aliceblue;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform:scaleX(0);
+
+}
+.button:hover::after{
+    transform:scaleX(1);
 }
 .div1{
-    margin-top: 100px;
+    margin-top: 150px;
 
-    margin-left: 198px;
+    margin-left: 8vw;
     margin-right: 198px;
 
 }
@@ -140,11 +263,10 @@ font-style: normal;
     font-weight: 400;
     font-style: normal;
     opacity: 1;
-    font-size: 80px;
+    font-size: 82px;
     margin:0%;
     line-height: 1.0;   
-width: 800px;
-}
+    width: 55vw;}
 
 .pre2{
 font-family: "Russo One", sans-serif;
@@ -168,12 +290,7 @@ font-family: "Russo One", sans-serif;
 }
 
 .container {
-    width: 300px; /* Adjust as needed */
-    height: 300px;
-
   
-
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,7 +300,6 @@ font-family: "Russo One", sans-serif;
     font-size: 10px;
     padding: 20px;
 
-    font-size: 20px;
     flex-basis: 40%;
     box-shadow: 1px 1px 5px rgb(255, 255, 255);
 
@@ -232,8 +348,8 @@ transform: scale(1.08);
     align-items: center;
     justify-content: space-evenly;
     gap: 40px;
-    margin-left: 198px;
-    margin-right: 198px;
+    margin-left: 10vw;
+    margin-right: 10vw;
     padding-top: 50px;
     padding-bottom: 60px;
 }
@@ -251,11 +367,15 @@ transform: scale(1.08);
 }
 
 .ab-me{
+    width: 20vw;
     height: 50px;
     align-items: center;
     position: relative;
     top: -23px;
-    left: 600px;
+    left: 39vw;
+
+    font-size: 20px;
+
 }
 
 .profile{
@@ -265,7 +385,9 @@ transform: scale(1.08);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 400px;
+  height: 80vh;
+
+  
 }
 
 .profile:hover {
@@ -299,6 +421,9 @@ transform: scale(1.08);
     border-width: 0px 5px  5px 0;
 }
 
+#intro{
+    font-size: 20px;
+}
 
 
 .div2{ 
@@ -307,13 +432,15 @@ transform: scale(1.08);
 
 
 
-
+.shortform{
+    display: none;
+}
 
 
 .div-1{
     display: grid;
-    margin-left: 550px;
-    grid-template-columns: repeat(2,1fr);
+    margin-left: 29vw;
+        grid-template-columns: repeat(2,1fr);
     align-items: center;
     justify-content: center;
     row-gap: 20px;
@@ -322,9 +449,15 @@ transform: scale(1.08);
     padding-bottom: 30px;
 
 }
+
+
+
+
+
+
 .a3{
     height: 134px;
-    width: 560px;
+    width: 670px;
     font-size: 20px;
     box-shadow: 1px 1px 3px black;
 color: white;
@@ -334,7 +467,6 @@ color: white;
 }
 
 .a3::before,.a3::after{
-    content: '';
     position: absolute;
     width: 15px; /* Size of the corner elements */
     height: 15px;
@@ -411,6 +543,7 @@ justify-content: center;
 .icon:hover{
     transform: scale(1.2);
 transition-duration: .5s;
+z-index: 1;
 }
 
 .icon:hover .img2{
@@ -418,9 +551,12 @@ transition-duration: .5s;
     cursor: pointer;
 }
 
+#hibernate{
+    height: 130px;
+}
+
 #hibernate:hover{
     filter:contrast(200%);
-
 }
 .sec4-1{
     margin-left: 235px;
@@ -439,7 +575,7 @@ transition-duration: .5s;
 #java1{
     position: relative;
     top: 0px;
-    left: -57px;
+    left: -3.6vw;
     height: 65px;
 }
 #springboot{
@@ -476,7 +612,7 @@ right: 0px;
     height: 550px;
 
     padding-top: 30px;
-    padding-left: 400px;
+    padding-left: 28vw;
 }
 
 .sec5-1::-webkit-scrollbar {
@@ -683,7 +819,1048 @@ footer>p{
 }
 
 .logo_container > a:hover{
+ 
     transform: scale(1.5);
     cursor: pointer;
     transition-duration: .5s;
 }
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1440px) {
+
+    #downloadCv {
+        right: -79.86vw;
+        height: 3.47vw;
+        font-size: 2.08vw;
+        font-weight: 1000;
+    }
+
+    .pre1 {
+        font-size: 3.47vw;
+    }
+
+    .pre2 {
+        font-size: 10.42vw;
+    }
+
+    .ab-me {
+        left: 39vw;
+    }
+   
+    .sec4-1 {
+        margin-left: 15vw;
+        margin-right: 13.75vw;
+        padding-bottom: 6.94vw; 
+    }
+}
+
+
+/* @media screen and (max-width: 1400px) {
+    #downloadCv{
+        top: -175px;
+        right: -1010px;
+     font-size: 30px;
+    font-weight: 1000;
+
+    }  
+    
+    .pre1{
+        font-size: 40px;
+    }
+
+    .pre2{
+        font-size: 130px;
+    }
+
+    #intro{
+        height: 370px;
+    }
+
+    .div4{
+        position: relative;
+        right: 140px;
+    }
+    .aside1{
+        gap: 40px;
+       }
+
+       .icon{
+        width: 240px;
+        height: 160px;
+    }
+
+    .sec4-1{
+        margin-left: 250px;
+        margin-right: 198px;
+        padding-bottom: 100px; 
+    }
+    .div-1{
+        column-gap: 20px;
+    }
+    .img2{
+        height: 130px;
+    }
+    #hibernate{
+        height: 110px;
+    }
+    .skrew{
+        height: 25px;
+    }
+
+    .sec5-1{
+        position: relative;
+        left: -110px;
+    }
+    footer>p{
+        font-size: 18px;
+    }
+
+} */
+@media screen and (max-width: 1484px) {
+
+
+#downloadCv {
+    right: -77vw;
+    top: -32vh;
+}
+}
+
+@media screen and (max-width: 1400px) {
+    #downloadCv {
+        top: -12.5vw;
+        right: -72.14vw;
+        font-size: 2.14vw;
+        font-weight: 1000;
+    }
+
+    .pre1 {
+        font-size: 2.86vw;
+    }
+
+    .pre2 {
+        font-size: 9.29vw;
+    }
+
+    #intro {
+        height: 26.43vw;
+    }
+
+    .div4 {
+        position: relative;
+        right: 10vw;
+    }
+
+    .aside1 {
+        gap: 2.86vw;
+    }
+
+    .icon {
+        width: 17.14vw;
+        height: 11.43vw;
+    }
+
+    .sec4-1 {
+        margin-left: 17.86vw;
+        margin-right: 14.14vw;
+        padding-bottom: 7.14vw;
+    }
+
+    .div-1 {
+        column-gap: 1.43vw;
+    }
+
+    .img2 {
+        height: 9.29vw;
+    }
+
+    #hibernate {
+        height: 7.86vw;
+    }
+
+    .skrew {
+        height: 1.79vw;
+    }
+
+    .sec5-1 {
+        position: relative;
+        left: -7.86vw;
+    }
+
+    footer > p {
+        font-size: 1.29vw;
+    }
+}
+
+
+/* @media screen and (max-width: 1265px) {
+    #downloadCv{
+        top: -162px;
+        right: -900px;
+     font-size: 25px;
+    font-weight: 900;
+
+    }
+    
+    .pre1{
+        font-size: 30px;
+    }
+
+    .pre2{
+        font-size: 110px;
+    }
+
+    .div4{
+        position: relative;
+        right: 240px;
+    }
+    
+
+    .sec4-1{                    /*    skills logo */
+        /* margin-left: 13vw;
+        margin-right: 198px;
+        padding-bottom: 100px; 
+    }
+    .sec5-1{
+        position: relative;
+        left: -40px;
+    } */
+
+    @media screen and (max-width: 1265px) {
+        #downloadCv {
+            top: -12.81vw;
+            right: -71.14vw;
+            font-size: 1.98vw;
+            font-weight: 900;
+        }
+        
+        .pre1 {
+            font-size: 2.37vw;
+        }
+    
+        .pre2 {
+            font-size: 8.7vw;
+        }
+    
+        .div4 {
+            position: relative;
+            right: 18.97vw;
+        }
+    
+        .sec4-1 {
+            margin-left: 13vw;  /* Already in vw */
+            margin-right: 15.65vw;
+            padding-bottom: 7.9vw;
+        }
+    
+        .sec5-1 {
+            position: relative;
+            left: -3.16vw;
+        }
+    }
+    
+
+
+@media screen and (max-width: 1100px) {
+
+    .heading{
+       margin-left: 100px;
+       margin-right: 100px;
+    }
+    .logo{
+        height: 80px;
+     }
+    
+    .button{
+        font-size: 18px;}
+    #downloadCv{
+        top: -161px;
+        right: -836px;
+     font-size: 16px;
+    font-weight: 900;
+
+    }
+    .pre1{
+        font-size: 60px;
+    }
+
+    .pre2{
+        font-size: 120px;
+    }
+    #intro{
+        font-size: 15px;
+    }
+
+
+    .ab-me{
+        width: 250px;
+    }
+    
+ 
+    .profile{
+        height: 350px;
+    }
+   
+     .a3, .a5{                                /*   education-details */
+        font-size: 17px;
+    }
+    .a5{
+        width: 150px;
+    }
+    .a3:hover {
+        color: white;
+        background: #ff4c76;
+        border: none;
+        box-shadow: 1px 1px 30px 1px rgb(247, 6, 243);
+    }
+    .container:hover {
+        box-shadow: 3px 1px 30px 1px;
+    
+    transform: scale(1.05);
+        border: white;
+        }
+
+        .sec4-1{
+            margin-left: 18vw;
+            margin-right: 12vw;
+
+            padding-bottom: 80px; 
+     
+            row-gap: 35px;
+        }
+
+        .icon{
+            width: 200px;
+            height: 140px;
+        }
+        .img2{
+            height: 110px;
+        }
+        #java1{
+            height: 47px;
+           
+        }
+        #springboot{
+            height: 60px;
+        }
+        #maven{
+            height: 40px;
+        }
+        #hibernate{
+            height: 90px;
+        }
+       .skrew{
+        height: 22px;
+       }
+
+       .sec5-1{
+        padding-top: 1vh;
+        padding-left: 23vw;
+        font-size: 15px;
+    }
+    .Project{
+width: 600px;
+    }
+    footer > p{
+    left: 0vw;
+    }
+    }
+
+
+
+    @media screen and (max-width: 950px) {
+        .heading{ 
+            display: none;
+        }
+         
+            .div1{
+                margin-left: 8vw;
+            } 
+
+            #side_bar{
+                top: 58vh;
+
+            }
+            #side_bar_Container{
+                padding: 0;
+                position: sticky;
+                top: 0;
+                display: flex;
+            }
+
+            .button {
+                width: 312px;
+                position: relative;
+                left: -70px;
+            }
+            #downloadCv {
+                top: -15vw;
+                right: -66vw;
+          font-size: 16px;
+         font-weight: 900;
+     
+         }
+         .pre1 {
+                font-size: 46px;
+                position: relative;
+                left: 0vw;
+                width: 48vw;
+            
+        }
+     
+         .pre2 {
+            font-size: 86px;
+        }
+         #intro{
+             font-size: 15px;
+             width: 500px;
+             height: auto;
+         }
+     
+         .ab-me{
+            left: 32vw;
+        }
+     .a3{
+        height: 14vw;
+        width: 65vw;
+     }
+     .a3, .a5{
+        font-size: 15px;
+     }
+
+     .sec4-1 {
+        margin-left: 5vw;
+        margin-right: 2vw;
+        padding-bottom: 53px;
+        row-gap: 30px;  }
+
+        .sec5-1 {
+            padding-left: 17vw;
+        }
+        #contact_p {
+            margin: 0px 60px 30px 60px;
+        }
+
+        .sec6-1-1{
+            position: relative;
+            right: 4vw;
+        }
+        footer > p{
+            font-size: 15px;
+        }
+        #LinkedIn , #GitHub{
+            height: 30px;
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        #side_bar_Container {
+            left: 7vw;
+        }
+        .div1 {
+            margin-left: 2vw;
+        }
+        .button {
+            width: 344px;
+            position: relative;
+            left: -74px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .pre1 {
+            font-size: 30px;
+        }
+     
+         .pre2 {
+            font-size: 70px;
+        }
+        #side_bar{
+            top: 46vh;
+        }
+        .button {
+            width: 314px;
+            position: relative;
+            left: -68px;
+        }
+        #downloadCv {
+            top: -19vw;
+            right: -73vw; }
+            .div4 {
+                right: 4.97vw;
+            }
+            .sec5-1 {
+                padding-left: 14vw;
+            }
+    }
+
+    
+    @media screen and (max-width: 750px) {
+        #side_bar{
+            top: 44vh;
+            right: 36vw;
+
+        }
+        .button {
+            width: 300px;
+            left: -67px;
+        }
+        .pre2 {
+            font-size: 68px;
+        }
+    }
+    @media screen and (max-width: 635px) {
+        .pre2 {
+            max-width: 90vw;
+        }
+        #side_bar_Container {
+            left: 4vw;
+        }
+        .button {
+            width: 258px;
+            left: -56px;
+        }
+        .div1 {
+            margin-left: 5vw;
+        }
+        #downloadCv {
+            top: -22vw;
+        }
+            .div4 {
+                right: 5.97vw;
+            }
+            .div-1 {
+                column-gap: 4.43vw;
+            }
+            .sec4-1 {
+                margin-left: 3vw;
+                margin-right: -1vw;               
+            }
+            .icon {
+                width: 180px;
+                height: 131px;
+            }
+            .Project {
+                width: 520px;
+            }
+            .sec6-1 {
+                margin: 0 22vw
+            }
+            .sec5-1 {
+                padding-left: 12vw;
+            }
+    }
+    @media screen and (max-width: 590px) {
+
+        #side_bar {
+            top: 37vh;
+            right: 38vw;
+        }
+
+        .button {
+            width: 240px;
+            left: -51px;
+        }
+    #downloadCv {
+        top: -14.5vw;
+    }
+
+    .a3, .a5 {
+        font-size: 11px;
+    }
+    div4 {
+        right: 46.97vw;
+    }
+    .sec5-1 {
+        padding-left: 11vw;
+    }
+
+    .icon {
+        width: 160px;
+        height: 110px;
+    }
+.img2{
+    height: 90px;
+}
+#java1{
+    height: 40px;  
+    left: -5.95vw;
+}
+#hibernate{
+    height: 75px;
+}
+.skrew{
+    height: 22px;
+   }
+    .Project {
+        
+        width: 500px;
+    }
+    .sec6-1 {
+        margin: 0 20vw;
+    }
+    footer > p {
+        font-size: 13px;
+    }
+  footer{
+    gap: 12vw;
+  }
+}
+
+    @media screen and (max-width: 560px) {
+        .div4 {
+            right: 4.97vw;
+        }
+        .Project {
+            width: 83vw;
+        }
+        .sec5-1 {
+            padding-left: 11vw;
+        }
+    }
+
+    @media screen and (max-width: 530px) {
+        
+        .sec5-1 {
+            padding-left: 11vw;
+        }
+        .div4 {
+            position: relative;
+            right: 6.97vw;
+        }
+        #downloadCv {
+            right: -63vw;
+        }
+        .button {
+            width: 217px;
+            left: -47px;
+        }
+    }
+    
+  
+
+    @media screen and (max-width: 501px) {
+        .sec1{
+            height: 80vh;
+
+        }
+        #downloadCv {
+            top: -16.5vw;
+        }
+        .ab-me {
+            width: 150px;
+            font-size: 17px;
+    }
+    .sub-sec2{
+        flex-direction: column;
+        padding: 0;
+        /* height: 95vh;  */
+        height: 87vh;
+        gap: 4vw;
+    }
+    .button {
+        position: relative;
+        width: 42vw;
+        position: relative;
+        left: -46px;
+    }
+    #intro{
+        width: 94vw;
+    }
+    .profile {
+        width: 44vw;
+        height: auto;
+    }
+    .sec2{
+        height: 100vh;
+
+    }
+    .a3, .a5 {
+        font-size: 10px;
+    }
+    .a3 {
+        padding: 2vw;
+        height: 14vw;
+        width: 80vw;
+    }
+
+    .div4 {
+        left: -6vw;
+    }
+
+    .div-1 {
+        column-gap: 6px;
+    }
+    .sec4-1{
+        margin-left: 8vw;
+
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2vw;
+    }
+    .icon {
+        width: 180px;
+        height: 120px;
+    }
+    .img2 {
+        height: 100px;
+    }
+    .skrew {
+        height: 16px;
+    }
+    
+    #java1{
+        left: -8.95vw;
+        height: 40px;
+    }
+    #hibernate {
+        height: 76px;
+    }
+    #springboot{
+        height: 54px;
+    }            #css_box{
+        position: relative;
+        left: 24vw;
+    }
+    .Project {
+        width: 352px;
+    }
+    .sec5-1 {
+        padding-left: 17vw;
+    }
+    .sec6-1{
+        position: relative;
+      
+            left: -8.5vw;    }
+
+    footer > p {
+        left: -4vw;
+        font-size: 9px;
+
+    }
+    footer {
+        gap: 3vw;
+    }
+    .logo_container {
+        gap: 35px;
+    }
+}
+@media screen and (max-width: 488px) {
+
+    #side_bar {
+        top: 31vh;
+        right: 38vw;
+        width: 51vw;
+
+    }
+        .div4{
+            right: 60.97vw;
+
+        }
+}
+    @media screen and (max-width: 475px) {
+        .div1 {
+            margin-top: 18vh;
+  
+        }
+        .div4 {
+            left: -4vw;        }
+    }
+    @media screen and (max-width: 450px) {
+       
+        .div4 {
+            left: -5vw;
+        }
+                    .shortform{
+                        display: block;
+                    }
+                    .fullform{
+                        display: none;
+                    }
+    }
+
+    @media screen and (max-width: 426px) {
+        #side_bar_Container {
+            gap: 68vw;
+        }
+        #side_bar {
+            
+            width: 57vw;
+            top: 24vh;
+            right: 39vw;
+        }
+        .pre1 {
+            font-size: 28px;
+            width: 63vw;
+        }
+        .pre2 {
+            font-size: 15vw;
+        }
+        #downloadCv {
+            top: -19vw;
+            right: -66vw;
+        }
+      
+        .a3, .a5 {
+            font-size: 9px;
+        }
+        .a3 {
+            height: 12vw;
+            width: 74vw;
+        }
+       
+        /* .heading{
+            margin-left: 4.5vw;
+            margin-right: 100px;
+            width: 385px;       
+            height: 60px; } */
+            /* .logo {
+                height: 51px;
+                right: 5vb;
+
+            } */
+            /* .aside1 {
+                gap: 13px;
+            } */
+
+            .logo {
+                height: 66px;
+            }
+            .button {
+                right: 0vw;
+                font-size: 16px;
+            }
+            
+                .div1 {
+                    margin-top: 155px;
+                    margin-left: 11vw;
+                }
+         
+                #side_bar_Container{
+                    gap: 55vw;
+                }
+        
+            .pre2 {
+                font-size: 57px;
+                max-width: 200px;
+
+            }
+            #downloadCv {
+                top: -17vw;
+                right: -64vw;}
+
+                .sec4-1 {
+                    margin-left: 4vw;}
+                    .sec5-1 {
+                        padding-left: 11vw;
+                    }
+                    .sec6-1 {
+                        left: -14vw;
+                    }
+
+    }
+
+    @media screen and (max-width: 405px) {
+        .div4 {
+            left: 3vw;
+        }
+        .a3 {
+            padding: 2vw;
+            height: 12vw;
+            width: 59vw;
+        }
+        .sec5-1 {
+            padding-left: 9.5vw;
+        }
+        .icon-container {
+        width: 80vw;
+        }
+        .sec6-1-1 {
+            padding: 20px;
+            right: -1vw;
+        }
+        .sec4-1 {
+            margin-left: 3vw;}
+        
+    }
+
+    @media screen and (max-width: 388px) {
+        .div1 {
+            margin-top: 155px;
+            margin-left: 5vw;
+        }
+        .div1 {
+            margin-left: 4vw;
+        }
+        .a3, .a5 {
+            font-size: 8px;
+        }
+        .a3 {
+            width: 76vw;
+        }
+      
+        .icon {
+            width: 160px;
+            height: 110px;
+        }
+     
+        .Project {
+            width: 295px;
+            font-size: 11.5px;
+        }
+       
+        .sec6-1 {
+            height: 476px;
+            left: -17vw;
+        }
+        .sec5-1 {
+            padding-left: 15vw;
+        }
+
+        #submit_form {
+height: 420px;
+        }
+        .logo_container {
+            right: -8px;    
+        }
+    }
+    @media screen and (max-width: 377px) {
+
+        #side_bar_Container {
+            gap: 72vw;
+        }
+        #side_bar {
+            width: 67vw;
+        }
+        .button {
+            font-size: 18px;
+        }
+        .heading {
+            margin-left: 2.5vw;
+            width: 356px;
+            gap: 15px;
+
+        }
+    .ab-me {
+        font-size: 11px;
+    }
+        .logo {
+            height: 46px;
+            right: 5vb;
+        }
+        .aside1 {
+            gap: 10px;
+        }
+        /* .button {
+          font-size: 9px;
+        } */
+    
+        footer > p {
+            left: 1vw;
+        }
+        .sec6-1-1 {
+            height: 455px;
+         
+        }
+        .sec5-1 {
+            padding-left: 14vw;
+        }
+    }
+    @media screen and (max-width: 362px) {
+
+
+        #side_bar {
+            width: 70vw;
+        
+        margin: -35vw;
+        padding: 7vw;
+        }
+        .sec1 {
+            height: 65vh;
+        }
+        .pre2 {
+            font-size: 52px;
+            max-width: 200px;
+        } 
+        .div4 {
+            left: -2vw;
+        }
+        .ab-me {
+            left: 30vw;
+        }
+        .sec5-1 {
+            padding-left: 12vw;
+        }
+        .sec6-1 {
+            height: 476px;
+            left: -17vw;
+        }
+    }
+    @media screen and (max-width: 357px) {
+        .sec2 {
+            height: 90vh;
+        }
+        .profile {
+            width: 78vw;}
+            .sub-sec2 {
+                height: 76vh;}
+            
+            .sec4-1 {
+                margin-left: 2.5vw;
+                column-gap: 0vw;
+            }
+    }
+    @media screen and (max-width: 330px) {
+        #side_bar_Container {
+            gap: 69vw;
+        }
+    .pre1 {
+        font-size: 26px;
+        width: 82vw;
+    }
+    .pre2 {
+        font-size: 50px;
+    }
+
+ 
+        #downloadCv {
+            top: -20vw;
+            right: -56vw;
+        }
+        .icon {
+            width: 150px;
+            height: 100px;
+        }
+
+        .img2 {
+            height: 92px;
+        }
+        #java1 {
+            left: -10.95vw;
+            height: 38px;
+        }
+        #hibernate {
+            height: 66px;
+        }
+        #maven {
+            height: 34px;
+        }
+        #springboot {
+            height: 48px;
+        }
+        .skrew {
+            height: 13px;
+        }
+
+        .sec5-1 {
+            padding-left: 8vw;
+        }
+
+}
+            
