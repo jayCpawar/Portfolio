@@ -111,15 +111,17 @@ top: 10px;
 border-radius: 30px;
 }
 .logo{
+    height: 100px;
+
+}
+
+.hidelogo{
     position: relative;
     top: 2vw;
-   height: 100px;
    background-color: rgb(6, 6, 6,0.8 );
    border: 1px  solid rgb(255, 255, 255);
    border-radius: 20px 10px;
 }
-
-
 #side_bar{
 display: none;
 flex-direction: column;
@@ -670,15 +672,16 @@ right: 0px;
     height: 550px;
 
     padding-top: 30px;
-    padding-left: 28vw;
+    padding-left: 24vw;
 }
 
 .sec5-1::-webkit-scrollbar {
     display: none; /* For Chrome, Safari, and other WebKit browsers */
 }
 .Project{
-    width: 60%;
-    border: 1px solid whitesmoke;
+   
+        width: 51vw;
+        border: 1px solid whitesmoke;
     position: sticky;
     top: 0px;
     padding: 0 20px;
@@ -686,7 +689,6 @@ right: 0px;
     box-shadow: 0 -5px 10px black , 0 5px 10px black;
     flex-direction: column;
     align-items: center;
-  
     border-radius: 10px;
 }
 
@@ -1534,7 +1536,7 @@ width: 600px;
         .pre2{
             font-size: 60px;
         }
-        }
+       
         .div4 {
             right: 4.97vw;
         }
@@ -1547,7 +1549,7 @@ width: 600px;
         #java1 {
             height: 38px;
         }
-    
+    }
 
     @media screen and (max-width: 530px) {
         
@@ -1570,6 +1572,26 @@ width: 600px;
   
 
     @media screen and (max-width: 501px) {
+        #about-me{
+            top: -5vh;
+        }
+        #education{
+            top: -5vh;
+        }
+      
+        #skills{
+            top: -5vh;
+        }
+    
+        #projects{
+            top: -5vh;
+        }
+    
+        #contact{
+            top: -5vh;
+        }
+
+
         .pre2 {
             max-width: 90vw;
         }
@@ -1679,7 +1701,7 @@ width: 600px;
         gap: 3vw;
     }
     .logo_container {
-        gap: 35px;
+        gap: 25px;
     }
 }
 @media screen and (max-width: 488px) {
@@ -1874,7 +1896,7 @@ height: 420px;
     @media screen and (max-width: 377px) {
 
         #side_bar_Container {
-            gap: 65vw;
+            gap: 61vw;
             left: 13vw;
 
         }
@@ -1897,7 +1919,7 @@ height: 420px;
         font-size: 11px;
     }
         .logo {
-            height: 46px;
+            height: 55px;
             right: 5vb;
         }
         .aside1 {
@@ -1915,7 +1937,7 @@ height: 420px;
          
         }
         .sec5-1 {
-            padding-left: 14vw;
+            padding-left: 12vw;
         }
     }
     @media screen and (max-width: 362px) {
@@ -1947,7 +1969,7 @@ height: 420px;
             left: 30vw;
         }
         .sec5-1 {
-            padding-left: 12vw;
+            padding-left: 10vw;
         }
         .sec6-1 {
             height: 476px;
@@ -1979,7 +2001,7 @@ height: 420px;
     }
     @media screen and (max-width: 330px) {
         #side_bar_Container {
-            gap: 69vw;
+            gap: 57vw;
         }
         
     .pre1 {
@@ -2021,8 +2043,7 @@ height: 420px;
         }
 
         .sec5-1 {
-            padding-left: 8vw;
+            padding-left: 5.5vw;
         }
-
 }
             
